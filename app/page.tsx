@@ -1,113 +1,474 @@
 import Image from 'next/image'
+import { Lisu_Bosa, Inter } from 'next/font/google'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faCalendarDay,
+  faClock,
+  faLocationPin,
+  faSprayCanSparkles,
+  fa2,
+  fa3,
+  faEuroSign, faBus, faDiceD6, fa4, fa5
+} from "@fortawesome/free-solid-svg-icons"
+import { faSquareInstagram, faFacebook, faVimeo } from '@fortawesome/free-brands-svg-icons'
+import CharacterSlider from "@/app/character_slider";
+
+// TODO: Serverside rendering optimization
+
+// lightwight inter
+const inter = Inter({ subsets: ['latin'], weight: "500" })
+const lisuBosa = Lisu_Bosa({ subsets: ['latin'], weight: "700" })
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    return (
+      <main className="h-full">
+          <div className="w-full">
+              <header className="border-b-2 border-zinc-800 bg-gradient-to-t from-pink-900 to-pink-950 py-5 px-10 lg:px-20 sm:flex items-center sm:place-content-between drop-shadow text-sm">
+                  <nav className={"hidden sm:block"}>
+                      <ul className={`list-none flex text-black ${inter.className}`}>
+                          <li className="lg:mr-5">
+                              <a href="#hahmokaarti">HAHMOKAARTI</a>
+                          </li>
+
+                          <li className={"mx-2 lg:mx-5"}>
+                              <a href={"#esitykset"}>NÄYTÖKSET</a>
+                          </li>
+                        {/*<li className={"mx-2 lg:mx-5"}>
+                          <a href={"#rooleissa"}>ROOLEISSA</a>
+                        </li>*/}
+                        <li className={"ml-2 lg:ml-5"}>
+                          <a href={"#vastaavat"}>VASTAAVAT</a>
+                        </li>
+                      </ul>
+                  </nav>
+
+                  <ul className="list-none flex place-content-center">
+                      <li className="mr-5 border-2 border-black w-10 h-10 rounded-3xl flex items-center justify-center">
+                          <FontAwesomeIcon icon={faSquareInstagram} fontWeight="500" className="h-5 w-5 text-black" />
+                      </li>
+
+                      <li className="mr-5 border-2 border-black w-10 h-10 rounded-3xl flex items-center justify-center">
+                          <FontAwesomeIcon icon={faVimeo} fontWeight="500" className="h-5 w-5 text-black" />
+                      </li>
+
+                      <li className="border-2 border-black w-10 h-10 rounded-3xl flex items-center justify-center">
+                          <FontAwesomeIcon icon={faFacebook} fontWeight="500" className="h-5 w-5 text-black" />
+                      </li>
+                  </ul>
+              </header>
+
+              <div className="align-center flex align-between flex-col lg:flex-row w-full place-content-between">
+                  <div className="shadow-2xl border-r-2 border-b-2 border-zinc-800 bg-black items-center flex lg:rounded-br-[5rem] w-full flex-row content-center">
+                      <Image src="/Speksi24valkea.png" alt="Kuolon Speksi 2043" width="300" height="300" className="p-10 m-auto" />
+                  </div>
+
+                  <div className={"items-center flex w-full px-2 sm:px-10 py-5 lg:px-5 lg:py-2"}>
+                      <video controls={true} className="rounded border-zinc-800 border-2">
+                          <source src="/traileri.mp4" type="video/mp4" className="w-full h-full" />
+                      </video>
+                  </div>
+              </div>
+          </div>
+
+          <article className="p-2 sm:p-10 mt-5 text-zinc-300">
+              <h1 className={`text-5xl my-5 ${lisuBosa.className} text-center text-zinc-100`}>Synopsis</h1>
+              <div className="flex flex-col lg:flex-row items-center">
+                  <div className="flex-1 leading-relaxed p-2 sm:p-0">
+                      <p>
+                          Eletään 1700-luvun alkua Iso-Britannian rannikolla. Alexander Harris, suuren kauppaempiirin tuleva perijä, on lähdössä merimatkalle kohti Ranskaa näkemään kihlattuaan ensi kertaa. Kunhan järjestetty avioliitto saa papin siunauksen, läjäytetään kauppaempiirin koko paino Alexanderin niskoille. Tästä kaikesta Harristen esikoisella Henrietalla on oma mielipiteensä - eikä niin suotuinen sellainen. Pelkoa Alexanderin matkalle tuo Harristen kauppalaivojen tunnettu vihollinen Kapteeni Kultakynsi merirosvojoukkoineen, joiden kuiskitaan suunnittelevan perijän kidnappausta suuria lunnaita vastaan. Mutta miten käy, kun Alexander joutuu kuin joutuukin merirosvojen kynsiin vain valeasu turvanaan, läheisensä pettämänä? Entä liehuuko laivassa merirosvolipun lisäksi kapinan tuulia? Ja miten tähän kaikkeen sotkeutuu kahden epäonnisen rakastavaisen kohtalot?
+                      </p>
+                  </div>
+
+                  <Image src="/instajulistet.png" alt="Juliste" width="500" height="500" className="m-10 rounded-xl" />
+              </div>
+          </article>
+
+          <article id={"hahmokaarti"} className="pb-10 flex flex-col min-h-full w-full bg-gradient-to-b from-zinc-900 via-zinc-800 to-black">
+              <h1 className={`text-5xl flex-grow-0 mb-2 ${lisuBosa.className} text-center mt-10 mb-10 text-zinc-100`}>Hahmokaarti</h1>
+              <CharacterSlider />
+          </article>
+
+          <article className="py-20 w-full bg-gradient-to-b from-black via-zinc-800 to-zinc-700 px-4 lg:px-0" id={"esitykset"}>
+              <h1 className={`text-5xl ${lisuBosa.className} text-center text-zinc-100`}>Näytökset</h1>
+              <div className={"text-center text-zinc-400 text-sm mt-2 mb-2 lg:mb-10"}>
+                <i>Paina näytöskertaa ostaaksesi lipun kide.appissa.</i>
+              </div>
+              <div className="p-0 md:p-5 xl:p-10 w-full lg:m-auto lg:w-3/4 md:flex justify-between">
+                  <div className="w-full">
+                       <div className="mt-2 bg-pink-800 text-black border-pink-950 shadow-xl border-2 w-full lg:w-96 py-2 pr-12 text-sm font-light">
+                         <div className="flex place-items-center">
+                            <FontAwesomeIcon icon={faSprayCanSparkles} className="h-12 w-12 p-2 text-black" />
+                           <span className="drop-shadow text-lg text-black font-normal">ENSI-ILTA</span>
+                         </div>
+                         <li className="flex place-items-center">
+                           <FontAwesomeIcon icon={faCalendarDay} className={"h-4 w-4 p-2"} />
+                           Pe 22.3.
+                         </li>
+                         <li className="flex place-items-center">
+                            <FontAwesomeIcon icon={faClock} className={"h-4 w-4 p-2"} />
+                            Klo 19:00
+                         </li>
+                         <li className="flex place-items-center">
+                           <FontAwesomeIcon icon={faLocationPin} className={"h-4 w-4 p-2"} />
+                           Maxim-sali
+                         </li>
+                         <li className="flex place-items-center">
+                           <FontAwesomeIcon icon={faEuroSign} className={"h-4 w-4 p-2"} />
+                           19 €
+                         </li>
+                       </div>
+                    <div className="border-l-2 border-zinc-500 h-6 ml-2 border-dotted" />
+                    <div className="bg-teal-800 border-teal-950 text-black shadow-xl border-2 w-full lg:w-96 py-2 pr-12 text-sm font-light">
+                      <div className="flex place-items-center">
+                        <FontAwesomeIcon icon={fa2} className="h-12 w-12 p-2 text-black" />
+                        <span className="drop-shadow text-lg text-black font-normal">ALUMNINÄYTÖS</span>
+                      </div>
+                      <li className="flex place-items-center">
+                        <FontAwesomeIcon icon={faCalendarDay} className={"h-4 w-4 p-2"} />
+                        La 23.3.
+                      </li>
+                      <li className="flex place-items-center">
+                        <FontAwesomeIcon icon={faClock} className={"h-4 w-4 p-2"} />
+                        Klo 19:00
+                      </li>
+                      <li className="flex place-items-center">
+                        <FontAwesomeIcon icon={faLocationPin} className={"h-4 w-4 p-2"} />
+                        Maxim-sali
+                      </li>
+                      <li className="flex place-items-center">
+                        <FontAwesomeIcon icon={faEuroSign} className={"h-4 w-4 p-2"} />
+                        17 €
+                      </li>
+                    </div>
+                    <div className="border-l-2 border-zinc-500 h-6 ml-2 border-dotted" />
+                    <div className="bg-teal-800 border-teal-950 text-black shadow-xl border-2 w-full lg:w-96 py-2 pr-12 text-sm font-light">
+                      <div className="flex place-items-center">
+                        <FontAwesomeIcon icon={fa3} className="h-12 w-12 p-2 text-black" />
+                        <span className="drop-shadow text-lg text-black font-normal">KOLMAS NÄYTÖS</span>
+                      </div>
+                      <ul className="flex flex-col justify-items-end">
+                        <li className="flex place-items-center">
+                          <FontAwesomeIcon icon={faCalendarDay} className={"h-4 w-4 p-2"} />
+                          Su 24.3.
+                        </li>
+                        <li className="flex place-items-center">
+                          <FontAwesomeIcon icon={faClock} className={"h-4 w-4 p-2"} />
+                          Klo 19:00
+                        </li>
+                        <li className="flex place-items-center">
+                          <FontAwesomeIcon icon={faLocationPin} className={"h-4 w-4 p-2"} />
+                          Maxim-sali
+                        </li>
+                        <li className="flex place-items-center">
+                          <FontAwesomeIcon icon={faEuroSign} className={"h-4 w-4 p-2"} />
+                          17 €
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="border-l-2 border-zinc-500 h-6 ml-2 border-dotted" />
+                    <div className="bg-pink-800 text-black border-pink-950 shadow-xl border-2 w-full lg:w-96 py-2 pr-12 text-sm font-light">
+                      <div className="flex place-items-center">
+                        <FontAwesomeIcon icon={faDiceD6} className="h-12 w-12 p-2 text-black" />
+                        <span className="drop-shadow text-lg text-black font-normal">VÄLINÄYTÖS</span>
+                      </div>
+                      <ul className="flex flex-col justify-items-end">
+                        <li className="flex place-items-center">
+                          <FontAwesomeIcon icon={faCalendarDay} className={"h-4 w-4 p-2"} />
+                          Ma 25.3.
+                        </li>
+                        <li className="flex place-items-center">
+                          <FontAwesomeIcon icon={faClock} className={"h-4 w-4 p-2"} />
+                          Klo 19:00
+                        </li>
+                        <li className="flex place-items-center">
+                          <FontAwesomeIcon icon={faLocationPin} className={"h-4 w-4 p-2"} />
+                          Maxim-sali
+                        </li>
+                        <li className="flex place-items-center">
+                          <FontAwesomeIcon icon={faEuroSign} className={"h-4 w-4 p-2"} />
+                          17 €
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="border-l-2 border-zinc-500 h-6 ml-2 border-dotted" />
+                    <div className="bg-teal-800 border-teal-950 text-black shadow-xl border-2 w-full lg:w-96 py-2 pr-12 text-sm font-light">
+                      <div className="flex place-items-center">
+                        <FontAwesomeIcon icon={fa4} className="h-12 w-12 p-2 text-black" />
+                        <span className="drop-shadow text-lg text-black font-normal">NELJÄS NÄYTÖS</span>
+                      </div>
+                      <ul className="flex flex-col justify-items-end">
+                        <li className="flex place-items-center">
+                          <FontAwesomeIcon icon={faCalendarDay} className={"h-4 w-4 p-2"} />
+                          Ti 26.3.
+                        </li>
+                        <li className="flex place-items-center">
+                          <FontAwesomeIcon icon={faClock} className={"h-4 w-4 p-2"} />
+                          Klo 19:00
+                        </li>
+                        <li className="flex place-items-center">
+                          <FontAwesomeIcon icon={faLocationPin} className={"h-4 w-4 p-2"} />
+                          Maxim-sali
+                        </li>
+                        <li className="flex place-items-center">
+                          <FontAwesomeIcon icon={faEuroSign} className={"h-4 w-4 p-2"} />
+                          17 €
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="border-l-2 border-zinc-500 h-6 ml-2 border-dotted" />
+                    <div className="bg-teal-800 border-teal-950 text-black shadow-xl border-2 w-full lg:w-96 py-2 pr-12 text-sm font-light">
+                      <div className="flex place-items-center">
+                        <FontAwesomeIcon icon={fa5} className="h-12 w-12 p-2 text-black" />
+                        <span className="drop-shadow text-lg text-black font-normal">VIIDES NÄYTÖS</span>
+                      </div>
+                      <ul className="flex flex-col justify-items-end">
+                        <li className="flex place-items-center">
+                          <FontAwesomeIcon icon={faCalendarDay} className={"h-4 w-4 p-2"} />
+                          Ke 27.3.
+                        </li>
+                        <li className="flex place-items-center">
+                          <FontAwesomeIcon icon={faClock} className={"h-4 w-4 p-2"} />
+                          Klo 19:00
+                        </li>
+                        <li className="flex place-items-center">
+                          <FontAwesomeIcon icon={faLocationPin} className={"h-4 w-4 p-2"} />
+                          Maxim-sali
+                        </li>
+                        <li className="flex place-items-center">
+                          <FontAwesomeIcon icon={faEuroSign} className={"h-4 w-4 p-2"} />
+                          17 €
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                <h1 className={`block md:hidden text-5xl ${lisuBosa.className} text-center m-10 text-zinc-100`}>Kiertue</h1>
+
+                <div className="ml-0 lg:ml-2 xl:ml-0 w-full md:flex md:p-2 lg:p-0 flex-col place-items-end justify-center">
+                  <div className="bg-pink-800 text-black border-pink-950 shadow-xl border-2 w-full lg:w-96 py-2 pr-12 text-sm font-light">
+                    <div className="flex place-items-center">
+                      <FontAwesomeIcon icon={faBus} className="h-12 w-12 p-2 text-black" />
+                      <span className="drop-shadow text-lg text-black font-normal">HELSINKI</span>
+                    </div>
+                    <li className="flex place-items-center">
+                      <FontAwesomeIcon icon={faCalendarDay} className={"h-4 w-4 p-2"} />
+                      Pe 5.4.
+                    </li>
+                    <li className="flex place-items-center">
+                      <FontAwesomeIcon icon={faClock} className={"h-4 w-4 p-2"} />
+                      Klo 19:00
+                    </li>
+                    <li className="flex place-items-center">
+                      <FontAwesomeIcon icon={faLocationPin} className={"h-4 w-4 p-2"} />
+                      Arabiasali
+                    </li>
+                    <li className="flex place-items-center">
+                      <FontAwesomeIcon icon={faEuroSign} className={"h-4 w-4 p-2"} />
+                      18 € opiskelija
+                    </li>
+                  </div>
+                  <div className="border-l-2 border-zinc-500 h-6 ml-2 md:mr-2 border-dotted" />
+                  <div className="bg-pink-800 text-black border-pink-950 border-2 shadow-xl w-full lg:w-96 py-2 pr-12 text-sm font-light">
+                    <div className="flex place-items-center">
+                      <FontAwesomeIcon icon={faBus} className="h-12 w-12 p-2 text-black" />
+                      <span className="drop-shadow text-lg text-black font-normal">TAMPERE</span>
+                    </div>
+                    <li className="flex place-items-center">
+                      <FontAwesomeIcon icon={faCalendarDay} className={"h-4 w-4 p-2"} />
+                      Su 6.4.
+                    </li>
+                    <li className="flex place-items-center">
+                      <FontAwesomeIcon icon={faClock} className={"h-4 w-4 p-2"} />
+                      Klo 19:00
+                    </li>
+                    <li className="flex place-items-center">
+                      <FontAwesomeIcon icon={faLocationPin} className={"h-4 w-4 p-2"} />
+                      Tanssiteatteri MD
+                    </li>
+                    <li className="flex place-items-center">
+                      <FontAwesomeIcon icon={faEuroSign} className={"h-4 w-4 p-2"} />
+                      18 € opiskelija
+                    </li>
+                  </div>
+                  <div className="border-l-2 border-zinc-500 h-6 ml-2 md:mr-2 border-dotted" />
+                  <div className="bg-pink-800 text-black border-pink-950 shadow-xl border-2 w-full lg:w-96 py-2 pr-12 text-sm font-light">
+                    <div className="flex place-items-center">
+                      <FontAwesomeIcon icon={faBus} className="h-12 w-12 p-2 text-black" />
+                      <span className="drop-shadow text-lg text-black font-normal">TURKU</span>
+                    </div>
+                    <li className="flex place-items-center">
+                      <FontAwesomeIcon icon={faCalendarDay} className={"h-4 w-4 p-2"} />
+                      Ma 7.4.
+                    </li>
+                    <li className="flex place-items-center">
+                      <FontAwesomeIcon icon={faClock} className={"h-4 w-4 p-2"} />
+                      Klo 19:00
+                    </li>
+                    <li className="flex place-items-center">
+                      <FontAwesomeIcon icon={faLocationPin} className={"h-4 w-4 p-2"} />
+                      Siqyy-sali
+                    </li>
+                    <li className="flex place-items-center">
+                      <FontAwesomeIcon icon={faEuroSign} className={"h-4 w-4 p-2"} />
+                      18 € opiskelija
+                    </li>
+                  </div>
+                </div>
+              </div>
+          </article>
+
+          <div className="bg-zinc-700 pb-10">
+            {/*<div className="mb-30 pt-5 flex flex-row justify-center place-items-center">
+              <i className={"p-2"}>ykkönen</i>
+              <i className={"p-2"}>kakkonen<br/>testi</i>
+            </div>*/}
+
+            <div className="flex justify-center">
+              <Image src={"/kaariteksti.png"} alt="Tyyrpuurin tuolla puolen" width="200" height="200" />
+            </div>
+          </div>
+
+        <div className="h-5 border-y-2 border-black bg-gradient-to-t from-pink-900 to-pink-950" />
+
+        <div className="bg-black-800 text-zinc-200 mt-20">
+          { /* <article className="mb-20" id={"rooleissa"}>
+            <h1 className={`text-5xl ${lisuBosa.className} text-center`}>Rooleissa</h1>
+            <div className="p-10 text-center">
+              tässä ei ole vielä mitään
+            </div>
+          </article>
+          */}
+
+          <article className="my-20">
+            <h1 id={"vastaavat"} className={`text-5xl ${lisuBosa.className} text-center text-zinc-100`}>Vastaavat</h1>
+            <div className="mt-10 p-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
+                <div className="items-center h-full justify-content-center place-content-center">
+                  <Image src="/tuotanto.jpg" alt="Tuotantovastaavat" width="500" height="500" className="rounded-2xl m-auto" />
+                  <div className="flex-1 flex flex-col justify-center place-items-center">
+                    <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Tuotanto</h2>
+                    <p className={"mb-4"}>Anniina Tapio</p>
+                    <p>Juho Anderson</p>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center h-full justify-content-center place-content-center">
+                  <Image src="/kasikirjoitus.jpg" alt="Käsikirjoitusvastaavat" width="500" height="500" className="rounded-2xl m-auto" />
+
+                    <div className="flex-1 h-full flex flex-col justify-center place-items-center">
+                      <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Käsikirjoitus</h2>
+                      <p>Aino Haajanen</p>
+                    </div>
+                </div>
+                <div className="flex flex-col items-center h-full justify-content-center place-content-center">
+                  <Image src="/taiteellinenjohto.jpg" alt="Taiteellisen johdon vastaavat" width="500" height="500" className="rounded-2xl m-auto" />
+                  <div className="flex-1 h-full flex flex-col justify-center place-items-center">
+                    <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Taiteellinen johto</h2>
+                    <p className={"mb-4"}>Rosa Sahlström</p>
+                    <p>Joonas Saharinen</p>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center h-full justify-content-center place-content-center">
+                  <Image src="/tanssivastaavat.jpg" alt="Tanssivastaavat" width="500" height="500" className="rounded-2xl m-auto" />
+                  <div className="flex-1 h-full flex flex-col justify-center place-items-center">
+                    <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Tanssi</h2>
+                    <p className={"mb-4"}>Raakel Pouttu</p>
+                    <p className={"mb-4"}>Senja Auvinen</p>
+                    <p>Roosa Jaakkola</p>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center h-full justify-content-center place-content-center">
+                  <Image src="/puvustusvastaavat.jpg" alt="Puvustusvastaava" width="500" height="500" className="rounded-2xl m-auto" />
+                  <div className="flex-1 h-full flex flex-col justify-center place-items-center">
+                    <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Puvustus</h2>
+                    <p className={"mb-4"}>Susanna Santala</p>
+                    <p>Alessandra Mäkelä</p>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center h-full justify-content-center place-content-center">
+                  <Image src="/valaistusvastaavat.jpg" alt="Valaistusvastaavat" width="500" height="500" className="rounded-2xl m-auto" />
+                  <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Valot</h2>
+                  <div className="flex-1 h-full flex flex-col justify-center place-items-center">
+                    <p className={"mb-4"}>Ilmari Tanninen</p>
+                    <p>Aaro Näätänen</p>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center h-full justify-content-center place-content-center">
+                  <Image src="/sanoitusvastaavat.jpg" alt="Sanoitusvastaavat" width="500" height="500" className="rounded-2xl m-auto" />
+                  <div className="flex-1 h-full flex flex-col justify-center place-items-center">
+                    <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Sanoitus</h2>
+                    <p className={"mb-4"}>Kreeta-Liina Franssila</p>
+                    <p>Minna Särkkälä</p>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center h-full justify-content-center place-content-center">
+                  <Image src="/maskeeraus.jpg" alt="Lavastusvastaavat" width="500" height="500" className="rounded-2xl m-auto" />
+                  <div className="flex-1 h-full flex flex-col justify-center place-items-center">
+                    <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Maski</h2>
+                    <p className={"mb-4"}>Hammi Vainio</p>
+                    <p className={"mb-4"}>Hanna Hara</p>
+                    <p>Wilma Matikainen</p>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center h-full justify-content-center place-content-center">
+                  <Image src="/bandivastaavat.jpg" alt="Bändi" width="500" height="500" className="rounded-2xl m-auto" />
+                  <div className="flex-1 h-full flex flex-col justify-center place-items-center">
+                    <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Bändi</h2>
+                    <p className={"mb-4"}>Heikki Koskiniemi</p>
+                    <p className={"mb-4"}>Pauli Pesonen</p>
+                    <p>Ella Siitari</p>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center h-full justify-content-center place-content-center">
+                  <Image src="/lavastusvastaavat.jpg" alt="Lavastusvastaavat" width="500" height="500" className="rounded-2xl m-auto" />
+                  <div className="flex-1 h-full flex flex-col justify-center place-items-center">
+                    <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Lavastus</h2>
+                    <p className={"mb-4"}>Veera Kuronen</p>
+                    <p className={"mb-4"}>Aino Jaakkola</p>
+                    <p>Oskari Juutinen</p>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center h-full justify-content-center place-content-center">
+                  <Image src="/kiertuvastaava.jpg" alt="Kiertuevastaava" width="500" height="500" className="rounded-2xl m-auto" />
+                  <div className="flex-1 h-full flex flex-col justify-center place-items-center">
+                    <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Kiertue</h2>
+                    <p className={"mb-4"}>JP Hakalehto</p>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center h-full justify-content-center place-content-center">
+                  <Image src="/catering.jpg" alt="Catering-vastaavat" width="500" height="500" className="rounded-2xl m-auto" />
+                  <div className="flex-1 h-full flex flex-col justify-center place-items-center">
+                    <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Catering</h2>
+                    <p className={"mb-4"}>Ruska Heikkilä</p>
+                    <p className={"mb-4"}>Petra Valkonen</p>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center h-full justify-content-center place-content-center justify-center">
+                  <Image src="/somevastaavat.jpg" alt="Somevastaavat" width="500" height="500" className="rounded-2xl m-auto" />
+                  <div className="flex-1 h-full flex flex-col justify-center place-items-center">
+                    <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Sosiaalinen media</h2>
+                    <p className={"mb-4"}>Anni Keskinen</p>
+                    <p>Petra Keromaa</p>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center h-full justify-content-center place-content-center">
+                  <Image src="/hupitiimi.jpg" alt="Hupitiimi" width="500" height="500" className="rounded-2xl m-auto" />
+                  <div className="flex-1 h-full flex flex-col justify-center place-items-center">
+                    <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Hupitiimi</h2>
+                    <p className={"mb-4"}>Riikka Yli-Riesto</p>
+                    <p className={"mb-4"}>Hanna Mangeloja</p>
+                    <p>Hanna Hara</p>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center h-full justify-content-center place-content-center">
+                  <div className="flex-1 h-full flex flex-col justify-center place-items-center">
+                    <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Nettisivut</h2>
+                    <p>Elias Leskinen</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      </main>
+    )
 }
