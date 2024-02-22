@@ -90,8 +90,8 @@ export default function Home() {
 
           <article className="py-20 w-full bg-gradient-to-b from-black via-zinc-800 to-zinc-700 px-4 lg:px-0" id={"esitykset"}>
               <h1 className={`text-5xl ${lisuBosa.className} text-center text-zinc-100`}>Näytökset</h1>
-              <div className={"text-center text-zinc-400 text-sm mt-2 mb-2 lg:mb-10"}>
-                <i>Paina näytöskertaa ostaaksesi lipun kide.appissa.</i>
+              <div className={"text-center text-zinc-400 text-sm mt-2 mb-10"}>
+                <i>Paina näytöskertaa ostaaksesi lipun kide.appista.</i>
               </div>
               <div className="p-0 md:p-5 xl:p-10 w-full lg:m-auto lg:w-3/4 md:flex justify-between">
                   <div className="w-full">
