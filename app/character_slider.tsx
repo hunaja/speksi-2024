@@ -14,7 +14,7 @@ const characters = [
     place: 1,
     name: "Henrietta Harris",
     description: "Henrietta on Harristen temperamenttinen ja dramaattisuuteen taipuva esikoinen. Temperamentin tuo helposti esille hänen pikkuveljensä Alexander, jonka titteliä kauppaempiirin perijänä Henrietta kadehtii. Hänen mielestään on huutava vääryys, ettei hän voi periä yhtiötä vain, koska on nainen. Henrietan suurta tunneskaalaa laajentaa myös menneisyyden epäonninen romanssi, joka saa hänet unelmoimaan siitä “mitä voisikaan olla”.",
-    image: "/placeholder.gif",
+    image: "/henrietta.jpg",
   },
   {
     place: 2,
@@ -26,13 +26,13 @@ const characters = [
     place: 3,
     name: "Clara",
     description: "Clara on aurinkoinen, lempeä sekä itsetietoinen ylhäisönainen. Hän on Henrietan hyvä ystävä ja valmis kertomaan tälle suoratkin sanat. Claran elämänilo on pirskahtelevaa, vaikka menneisyydestä paljastuukin rakkaan aviomiehen menehtyminen. Onko Clara valmis avaamaan sydämensä uudelleen?",
-    image: "/placeholder.gif",
+    image: "/clara.jpg",
   },
   {
     place: 4,
     name: 'Robert "Bobby"',
     description: 'Bobby on kauppalaivaston nuori ja innokas kajuuttavahti. Hänen suurin unelmansa on seikkailu merillä merirosvojen parissa. Mutta miten käy, kun unelma käykin toteen? Onko naiivi ja puhelias poika valmis merirosvoelämän haasteisiin? Entä mikä olikaan miekkailua rakastavan Bobbyn syntyperä?',
-    image: "/placeholder.gif",
+    image: "/bobby.jpg",
   },
   {
     place: 5,
@@ -50,19 +50,19 @@ const characters = [
     place: 7,
     name: "Rontti",
     description: 'Rontti on merirosvolaivan karski korsto. Hänen harteilleen annetaan kaikki tehtävät, joihin liittyy uhkailua taikka pelottelua. Mutta sisältävätkö Rontin syvimmät haaveet sittenkään merirosvoilun raakuutta? Ja osaisiko hän edes enää tehdä oikein, jos saisi siihen tilaisuuden?',
-    image: "/placeholder.gif",
+    image: "/rontti.jpg",
   },
   {
     place: 8,
     name: "Viima",
     description: 'Viima toimii merirosvolaivalla lähetin pestissä. Luonteeltaan hän on hölmö höseltäjä, jonka tarinat hairahtuvat usein kaikkien muiden mielestä turhiin yksityiskohtiin. Pienistä vioistaan huolimatta Viima ilmestyy aina sinne missä häntä tarvitaan, usein itsekään tietämättä miten siinä onnistuu.',
-    image: "/placeholder.gif",
+    image: "/viima.jpg",
   },
   {
     place: 9,
     name: "Manda",
     description: 'Manda on vakiokalustoa merirosvolaivalla, eikä kukaan oikein tarkasti tiedä, kuinka vanha hän onkaan. Tähän vaikuttaa Mandan tapa esittää huomattavasti vanhempaa ja raihnaisempaa merirosvolaivan miehistön nähden. Mandan löytää sieltä, missä tapahtuu ja mistä on mahdollista kerätä hyviä juoruja. Ja jos mitään häntä viihdyttävää ei tapahdu, hän kyllä osaa laittaa pyörät pyörimään niin, että ainakin pian on viihdykettä tarjolla!',
-    image: "/placeholder.gif",
+    image: "/manda.jpg",
   }
 ]
 
@@ -118,10 +118,8 @@ export default function CharacterSlider() {
             </p>
           </div>
           <div className={"flex flex-col justify-center max-w-full"}>
-            {/*
               <img src={character.image} alt="Hahmokaarti"
-                   className="p-2 lg:p-10 max-w-[40vw] md:max-w-[30vw] xl:max-w-[30vw] lg:max-w-[40vw] m-auto lg:m-0"/>
-            */}
+                   className="p-2 lg:p-10 max-w-[40vw] md:max-w-[30vw] m-auto lg:m-0"/>
           </div>
         </animated.div>
             <button
