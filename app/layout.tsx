@@ -5,8 +5,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'KuoLO:n Speksi',
-  description: 'asd',
+  title: 'KuoLO:n Speksi - Tyyrpuurin tuolla puolen',
+  description: 'Eletään 1700-luvun alkua Iso-Britannian rannikolla.',
 }
 
 export default function RootLayout({

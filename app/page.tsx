@@ -62,10 +62,8 @@ export default function Home() {
                       <Image src="/Speksi24valkea.png" alt="Kuolon Speksi 2043" width="300" height="300" className="p-10 m-auto" />
                   </div>
 
-                  <div className={"items-center flex w-full px-2 sm:px-10 py-5 lg:px-5 lg:py-2"}>
-                      <video controls={true} className="rounded border-zinc-800 border-2">
-                          <source src="/traileri.mp4" type="video/mp4" className="w-full h-full" />
-                      </video>
+                  <div className={"items-center justify-center flex w-full px-2 sm:px-10 py-5 lg:px-5 lg:py-2"}>
+                    <iframe src="https://player.vimeo.com/video/916783268?h=ecf27ecb26&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" className="w-full h-96 lg:h-full" frameBorder="0" allow="fullscreen; picture-in-picture" title="KuoLOn Speksi 2024 Traileri"></iframe>
                   </div>
               </div>
           </div>
@@ -95,6 +93,7 @@ export default function Home() {
               </div>
               <div className="p-0 md:p-5 xl:p-10 w-full lg:m-auto lg:w-3/4 md:flex justify-between">
                   <div className="w-full">
+                      <a href="https://kide.app/events/6d5cba6c-8247-48d1-b2cf-d2f3af352764/details" target={"_blank"}>
                        <div className="mt-2 bg-pink-800 text-black border-pink-950 shadow-xl border-2 w-full lg:w-96 py-2 pr-12 text-sm font-light">
                          <div className="flex place-items-center">
                             <FontAwesomeIcon icon={faSprayCanSparkles} className="h-12 w-12 p-2 text-black" />
@@ -110,14 +109,16 @@ export default function Home() {
                          </li>
                          <li className="flex place-items-center">
                            <FontAwesomeIcon icon={faLocationPin} className={"h-4 w-4 p-2"} />
-                           Maxim-sali
+                           Maxim, Haapaniemenkatu 34
                          </li>
                          <li className="flex place-items-center">
                            <FontAwesomeIcon icon={faEuroSign} className={"h-4 w-4 p-2"} />
                            19 €
                          </li>
                        </div>
+                      </a>
                     <div className="border-l-2 border-zinc-500 h-6 ml-2 border-dotted" />
+                    <a href={"https://kide.app/events/6d5cba6c-8247-48d1-b2cf-d2f3af352764/details"} target={"_blank"}>
                     <div className="bg-teal-800 border-teal-950 text-black shadow-xl border-2 w-full lg:w-96 py-2 pr-12 text-sm font-light">
                       <div className="flex place-items-center">
                         <FontAwesomeIcon icon={fa2} className="h-12 w-12 p-2 text-black" />
@@ -129,18 +130,20 @@ export default function Home() {
                       </li>
                       <li className="flex place-items-center">
                         <FontAwesomeIcon icon={faClock} className={"h-4 w-4 p-2"} />
-                        Klo 19:00
+                        Klo 18:00
                       </li>
                       <li className="flex place-items-center">
                         <FontAwesomeIcon icon={faLocationPin} className={"h-4 w-4 p-2"} />
-                        Maxim-sali
+                        Maxim, Haapaniemenkatu 34
                       </li>
                       <li className="flex place-items-center">
                         <FontAwesomeIcon icon={faEuroSign} className={"h-4 w-4 p-2"} />
                         17 €
                       </li>
                     </div>
+                    </a>
                     <div className="border-l-2 border-zinc-500 h-6 ml-2 border-dotted" />
+                    <a href={"https://kide.app/events/6d5cba6c-8247-48d1-b2cf-d2f3af352764/details"} target={"_blank"}>
                     <div className="bg-teal-800 border-teal-950 text-black shadow-xl border-2 w-full lg:w-96 py-2 pr-12 text-sm font-light">
                       <div className="flex place-items-center">
                         <FontAwesomeIcon icon={fa3} className="h-12 w-12 p-2 text-black" />
@@ -153,11 +156,11 @@ export default function Home() {
                         </li>
                         <li className="flex place-items-center">
                           <FontAwesomeIcon icon={faClock} className={"h-4 w-4 p-2"} />
-                          Klo 19:00
+                          Klo 18:00
                         </li>
                         <li className="flex place-items-center">
                           <FontAwesomeIcon icon={faLocationPin} className={"h-4 w-4 p-2"} />
-                          Maxim-sali
+                          Maxim, Haapaniemenkatu 34
                         </li>
                         <li className="flex place-items-center">
                           <FontAwesomeIcon icon={faEuroSign} className={"h-4 w-4 p-2"} />
@@ -165,32 +168,16 @@ export default function Home() {
                         </li>
                       </ul>
                     </div>
+                    </a>
                     <div className="border-l-2 border-zinc-500 h-6 ml-2 border-dotted" />
                     <div className="bg-pink-800 text-black border-pink-950 shadow-xl border-2 w-full lg:w-96 py-2 pr-12 text-sm font-light">
                       <div className="flex place-items-center">
                         <FontAwesomeIcon icon={faDiceD6} className="h-12 w-12 p-2 text-black" />
-                        <span className="drop-shadow text-lg text-black font-normal">VÄLINÄYTÖS</span>
+                        <span className="drop-shadow text-lg text-black font-normal">VÄLIPÄIVÄ</span>
                       </div>
-                      <ul className="flex flex-col justify-items-end">
-                        <li className="flex place-items-center">
-                          <FontAwesomeIcon icon={faCalendarDay} className={"h-4 w-4 p-2"} />
-                          Ma 25.3.
-                        </li>
-                        <li className="flex place-items-center">
-                          <FontAwesomeIcon icon={faClock} className={"h-4 w-4 p-2"} />
-                          Klo 19:00
-                        </li>
-                        <li className="flex place-items-center">
-                          <FontAwesomeIcon icon={faLocationPin} className={"h-4 w-4 p-2"} />
-                          Maxim-sali
-                        </li>
-                        <li className="flex place-items-center">
-                          <FontAwesomeIcon icon={faEuroSign} className={"h-4 w-4 p-2"} />
-                          17 €
-                        </li>
-                      </ul>
                     </div>
                     <div className="border-l-2 border-zinc-500 h-6 ml-2 border-dotted" />
+                    <a href={"https://kide.app/events/6d5cba6c-8247-48d1-b2cf-d2f3af352764/details"} target={"_blank"}>
                     <div className="bg-teal-800 border-teal-950 text-black shadow-xl border-2 w-full lg:w-96 py-2 pr-12 text-sm font-light">
                       <div className="flex place-items-center">
                         <FontAwesomeIcon icon={fa4} className="h-12 w-12 p-2 text-black" />
@@ -203,11 +190,11 @@ export default function Home() {
                         </li>
                         <li className="flex place-items-center">
                           <FontAwesomeIcon icon={faClock} className={"h-4 w-4 p-2"} />
-                          Klo 19:00
+                          Klo 18:00
                         </li>
                         <li className="flex place-items-center">
                           <FontAwesomeIcon icon={faLocationPin} className={"h-4 w-4 p-2"} />
-                          Maxim-sali
+                          Maxim, Haapaniemenkatu 34
                         </li>
                         <li className="flex place-items-center">
                           <FontAwesomeIcon icon={faEuroSign} className={"h-4 w-4 p-2"} />
@@ -215,7 +202,9 @@ export default function Home() {
                         </li>
                       </ul>
                     </div>
+                    </a>
                     <div className="border-l-2 border-zinc-500 h-6 ml-2 border-dotted" />
+                    <a href={"https://kide.app/events/6d5cba6c-8247-48d1-b2cf-d2f3af352764/details"} target={"_blank"}>
                     <div className="bg-teal-800 border-teal-950 text-black shadow-xl border-2 w-full lg:w-96 py-2 pr-12 text-sm font-light">
                       <div className="flex place-items-center">
                         <FontAwesomeIcon icon={fa5} className="h-12 w-12 p-2 text-black" />
@@ -228,11 +217,11 @@ export default function Home() {
                         </li>
                         <li className="flex place-items-center">
                           <FontAwesomeIcon icon={faClock} className={"h-4 w-4 p-2"} />
-                          Klo 19:00
+                          Klo 18:00
                         </li>
                         <li className="flex place-items-center">
                           <FontAwesomeIcon icon={faLocationPin} className={"h-4 w-4 p-2"} />
-                          Maxim-sali
+                          Maxim, Haapaniemenkatu 34
                         </li>
                         <li className="flex place-items-center">
                           <FontAwesomeIcon icon={faEuroSign} className={"h-4 w-4 p-2"} />
@@ -240,11 +229,13 @@ export default function Home() {
                         </li>
                       </ul>
                     </div>
+                    </a>
                   </div>
 
                 <h1 className={`block md:hidden text-5xl ${lisuBosa.className} text-center m-10 text-zinc-100`}>Kiertue</h1>
 
                 <div className="ml-0 lg:ml-2 xl:ml-0 w-full md:flex md:p-2 lg:p-0 flex-col place-items-end justify-center">
+                  <a href="https://kide.app/events/afd6cce8-a018-49c5-a112-7e133656c102/details" target={"_blank"}>
                   <div className="bg-pink-800 text-black border-pink-950 shadow-xl border-2 w-full lg:w-96 py-2 pr-12 text-sm font-light">
                     <div className="flex place-items-center">
                       <FontAwesomeIcon icon={faBus} className="h-12 w-12 p-2 text-black" />
@@ -256,18 +247,20 @@ export default function Home() {
                     </li>
                     <li className="flex place-items-center">
                       <FontAwesomeIcon icon={faClock} className={"h-4 w-4 p-2"} />
-                      Klo 19:00
+                      Klo 17:00
                     </li>
                     <li className="flex place-items-center">
                       <FontAwesomeIcon icon={faLocationPin} className={"h-4 w-4 p-2"} />
-                      Arabiasali
+                      Arabiasali, Muotoilijankatu 1B
                     </li>
                     <li className="flex place-items-center">
                       <FontAwesomeIcon icon={faEuroSign} className={"h-4 w-4 p-2"} />
                       18 € opiskelija
                     </li>
                   </div>
+                  </a>
                   <div className="border-l-2 border-zinc-500 h-6 ml-2 md:mr-2 border-dotted" />
+                  <a href="https://kide.app/events/afd6cce8-a018-49c5-a112-7e133656c102/details" target={"_blank"}>
                   <div className="bg-pink-800 text-black border-pink-950 border-2 shadow-xl w-full lg:w-96 py-2 pr-12 text-sm font-light">
                     <div className="flex place-items-center">
                       <FontAwesomeIcon icon={faBus} className="h-12 w-12 p-2 text-black" />
@@ -279,18 +272,20 @@ export default function Home() {
                     </li>
                     <li className="flex place-items-center">
                       <FontAwesomeIcon icon={faClock} className={"h-4 w-4 p-2"} />
-                      Klo 19:00
+                      Klo 17:00
                     </li>
                     <li className="flex place-items-center">
                       <FontAwesomeIcon icon={faLocationPin} className={"h-4 w-4 p-2"} />
-                      Tanssiteatteri MD
+                      Hällä-näyttämö, Hämeenkatu 25
                     </li>
                     <li className="flex place-items-center">
                       <FontAwesomeIcon icon={faEuroSign} className={"h-4 w-4 p-2"} />
                       18 € opiskelija
                     </li>
                   </div>
+                  </a>
                   <div className="border-l-2 border-zinc-500 h-6 ml-2 md:mr-2 border-dotted" />
+<a href="https://kide.app/events/afd6cce8-a018-49c5-a112-7e133656c102/details" target={"_blank"}>
                   <div className="bg-pink-800 text-black border-pink-950 shadow-xl border-2 w-full lg:w-96 py-2 pr-12 text-sm font-light">
                     <div className="flex place-items-center">
                       <FontAwesomeIcon icon={faBus} className="h-12 w-12 p-2 text-black" />
@@ -302,17 +297,18 @@ export default function Home() {
                     </li>
                     <li className="flex place-items-center">
                       <FontAwesomeIcon icon={faClock} className={"h-4 w-4 p-2"} />
-                      Klo 19:00
+                      Klo 17:00
                     </li>
                     <li className="flex place-items-center">
                       <FontAwesomeIcon icon={faLocationPin} className={"h-4 w-4 p-2"} />
-                      Siqyy-sali
+                      Siqyn-sali, Linnankatu 60
                     </li>
                     <li className="flex place-items-center">
                       <FontAwesomeIcon icon={faEuroSign} className={"h-4 w-4 p-2"} />
                       18 € opiskelija
                     </li>
                   </div>
+</a>
                 </div>
               </div>
           </article>
