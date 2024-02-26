@@ -43,17 +43,23 @@ export default function Home() {
                   </nav>
 
                   <ul className="list-none flex place-content-center">
+                      <a href={"https://www.instagram.com/kuolonspeksi/?hl=en"} target={"_blank"}>
                       <li className="mr-5 border-2 border-black w-10 h-10 rounded-3xl flex items-center justify-center">
                           <FontAwesomeIcon icon={faSquareInstagram} fontWeight="500" className="h-5 w-5 text-black" />
                       </li>
+                      </a>
 
-                      <li className="mr-5 border-2 border-black w-10 h-10 rounded-3xl flex items-center justify-center">
-                          <FontAwesomeIcon icon={faVimeo} fontWeight="500" className="h-5 w-5 text-black" />
-                      </li>
+                      <a href={"https://vimeo.com/user11645998"} target={"_blank"}>
+                        <li className="mr-5 border-2 border-black w-10 h-10 rounded-3xl flex items-center justify-center">
+                            <FontAwesomeIcon icon={faVimeo} fontWeight="500" className="h-5 w-5 text-black" />
+                        </li>
+                      </a>
 
+                      <a href={"https://www.facebook.com/speksikuolo/"} target={"_blank"}>
                       <li className="border-2 border-black w-10 h-10 rounded-3xl flex items-center justify-center">
                           <FontAwesomeIcon icon={faFacebook} fontWeight="500" className="h-5 w-5 text-black" />
                       </li>
+                        </a>
                   </ul>
               </header>
 
