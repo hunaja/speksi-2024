@@ -22,6 +22,8 @@ import valaistusvastaavat from "@/public/vastaavat_cropped/valaistusvastaavat.jp
 import sanoitusvastaavat from "@/public/vastaavat_cropped/sanoitusvastaavat.jpg"
 import maskeerausvastaavat from "@/public/vastaavat_cropped/maskeeraus.jpg"
 import bandi from "@/public/vastaavat_cropped/bandivastaavat.jpg"
+import ohjaus from "@/public/vastaavat_cropped/ohjaus.jpg"
+import aanivastaaavat from "@/public/vastaavat_cropped/aanivastaavat.jpg"
 import lavastusvastaavat from "@/public/vastaavat_cropped/lavastusvastaavat.jpg"
 import kiertuevastaavat from "@/public/vastaavat_cropped/kiertuevastaava.jpg"
 import cateringvastaavat from "@/public/vastaavat_cropped/catering.jpg"
@@ -369,6 +371,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
+                  <Image src={ohjaus} alt="Ohjausvastaavat" className="rounded-2xl m-auto" rel={"preload"} />
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Ohjaus</h2>
                     <p className={"mb-4"}>Sara Vapaavuori</p>
@@ -467,6 +470,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
+                  <Image src={aanivastaaavat} alt="Äänivastaavat" className="rounded-2xl m-auto" rel={"preload"} />
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Ääni</h2>
                     <p>-</p>
