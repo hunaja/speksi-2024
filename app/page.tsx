@@ -13,7 +13,7 @@ import {
 import { faSquareInstagram, faFacebook, faVimeo } from '@fortawesome/free-brands-svg-icons'
 import CharacterSlider from "@/app/character_slider";
 
-import tuotantovastaavat from "@/public/vastaavat_original/tuotanto.jpg"
+import tuotantovastaavat from "@/public/vastaavat_cropped/tuotanto.jpg"
 import kasikirjoitusvastaavat from "@/public/vastaavat_cropped/kasikirjoitus.jpg"
 import taiteellinenjohto from "@/public/vastaavat_cropped/taiteellinenjohto.jpg"
 import tanssivastaavat from "@/public/vastaavat_cropped/tanssivastaavat.jpg"
@@ -369,12 +369,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
-                  <Image src={kasikirjoitusvastaavat} alt="Käsikirjoitusvastaavat"  className="rounded-2xl m-auto" rel={"preload"} />
-
-                    <div className="flex-1 h-full flex flex-col justify-center place-items-center">
-                      <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Käsikirjoitus</h2>
-                      <p>Aino Jaakkola</p>
-                    </div>
+                  <div className="flex-1 h-full flex flex-col justify-center place-items-center">
+                    <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Ohjaus</h2>
+                    <p className={"mb-4"}>Sara Raatikainen</p>
+                    <p className={"mb-4"}>Lotta Ropponen</p>
+                    <p>Iisa Taimela</p>
+                  </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
                   <Image src={taiteellinenjohto} alt="Taiteellisen johdon vastaavat" className="rounded-2xl m-auto" rel={"preload"} />
@@ -383,6 +383,14 @@ export default function Home() {
                     <p className={"mb-4"}>Rosa Sahlström</p>
                     <p>Joonas Saharinen</p>
                   </div>
+                </div>
+                <div className="flex flex-col items-center h-full justify-content-center place-content-center">
+                  <Image src={kasikirjoitusvastaavat} alt="Käsikirjoitusvastaavat"  className="rounded-2xl m-auto" rel={"preload"} />
+
+                    <div className="flex-1 h-full flex flex-col justify-center place-items-center">
+                      <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Käsikirjoitus</h2>
+                      <p>Aino Jaakkola</p>
+                    </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
                   <Image src={tanssivastaavat} alt="Tanssivastaavat" className="rounded-2xl m-auto" />
@@ -449,6 +457,13 @@ export default function Home() {
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Kiertue</h2>
                     <p className={"mb-4"}>JP Hakalehto</p>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center h-full justify-content-center place-content-center">
+                  <div className="flex-1 h-full flex flex-col justify-center place-items-center">
+                    <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Valokuvaus</h2>
+                    <p className={"mb-4"}>Otto Laine</p>
+                    <p>Alpo Laitinen</p>
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
