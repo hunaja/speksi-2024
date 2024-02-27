@@ -371,7 +371,7 @@ export default function Home() {
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Ohjaus</h2>
-                    <p className={"mb-4"}>Sara Raatikainen</p>
+                    <p className={"mb-4"}>Sara Vapaavuori</p>
                     <p className={"mb-4"}>Lotta Ropponen</p>
                     <p>Iisa Taimela</p>
                   </div>
@@ -429,7 +429,7 @@ export default function Home() {
                   <Image src={maskeerausvastaavat} alt="Maskeerausvastaavat" className="rounded-2xl m-auto" />
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Maski</h2>
-                    <p className={"mb-4"}>Hammi Vainio</p>
+                    <p className={"mb-4"}>Hanna-Liina Vainio</p>
                     <p className={"mb-4"}>Hanna Hara</p>
                     <p>Wilma Matikainen</p>
                   </div>
