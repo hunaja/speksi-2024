@@ -13,6 +13,21 @@ import {
 import { faSquareInstagram, faFacebook, faVimeo } from '@fortawesome/free-brands-svg-icons'
 import CharacterSlider from "@/app/character_slider";
 
+import tuotantovastaavat from "@/public/tuotanto.jpg"
+import kasikirjoitusvastaavat from "@/public/kasikirjoitus.jpg"
+import taiteellinenjohto from "@/public/taiteellinenjohto.jpg"
+import tanssivastaavat from "@/public/tanssivastaavat.jpg"
+import puvustusvastaavat from "@/public/puvustusvastaavat.jpg"
+import valaistusvastaavat from "@/public/valaistusvastaavat.jpg"
+import sanoitusvastaavat from "@/public/sanoitusvastaavat.jpg"
+import maskeerausvastaavat from "@/public/maskeerausvastaavat.jpg"
+import bandi from "@/public/bandi.jpg"
+import lavastusvastaavat from "@/public/lavastusvastaavat.jpg"
+import kiertuevastaavat from "@/public/kiertuvastaava.jpg"
+import cateringvastaavat from "@/public/catering.jpg"
+import somevastaavat from "@/public/somevastaavat.jpg"
+import hupitiimi from "@/public/hupitiimi.jpg"
+
 // TODO: Serverside rendering optimization
 
 // lightwight inter
@@ -346,7 +361,7 @@ export default function Home() {
             <div className="mt-10 p-10">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
                 <div className="items-center h-full justify-content-center place-content-center">
-                  <Image src="/tuotanto.jpg" alt="Tuotantovastaavat" width="500" height="500" className="rounded-2xl m-auto" />
+                  <Image src={tuotantovastaavat} alt="Tuotantovastaavat" className="rounded-2xl m-auto" />
                   <div className="flex-1 flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Tuotanto</h2>
                     <p className={"mb-4"}>Anniina Tapio</p>
@@ -354,7 +369,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
-                  <Image src="/kasikirjoitus.jpg" alt="Käsikirjoitusvastaavat" width="500" height="500" className="rounded-2xl m-auto" />
+                  <Image src={kasikirjoitusvastaavat} alt="Käsikirjoitusvastaavat"  className="rounded-2xl m-auto" />
 
                     <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                       <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Käsikirjoitus</h2>
@@ -362,7 +377,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
-                  <Image src="/taiteellinenjohto.jpg" alt="Taiteellisen johdon vastaavat" width="500" height="500" className="rounded-2xl m-auto" />
+                  <Image src={taiteellinenjohto} alt="Taiteellisen johdon vastaavat" className="rounded-2xl m-auto" />
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Taiteellinen johto</h2>
                     <p className={"mb-4"}>Rosa Sahlström</p>
@@ -370,7 +385,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
-                  <Image src="/tanssivastaavat.jpg" alt="Tanssivastaavat" width="500" height="500" className="rounded-2xl m-auto" />
+                  <Image src={tanssivastaavat} alt="Tanssivastaavat" className="rounded-2xl m-auto" />
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Tanssi</h2>
                     <p className={"mb-4"}>Raakel Pouttu</p>
@@ -379,7 +394,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
-                  <Image src="/puvustusvastaavat.jpg" alt="Puvustusvastaava" width="500" height="500" className="rounded-2xl m-auto" />
+                  <Image src={puvustusvastaavat} alt="Puvustusvastaava" className="rounded-2xl m-auto" />
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Puvustus</h2>
                     <p className={"mb-4"}>Susanna Santala</p>
@@ -387,7 +402,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
-                  <Image src="/valaistusvastaavat.jpg" alt="Valaistusvastaavat" width="500" height="500" className="rounded-2xl m-auto" />
+                  <Image src={valaistusvastaavat} alt="Valaistusvastaavat" className="rounded-2xl m-auto" />
                   <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Valot</h2>
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <p className={"mb-4"}>Ilmari Tanninen</p>
@@ -395,7 +410,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
-                  <Image src="/sanoitusvastaavat.jpg" alt="Sanoitusvastaavat" width="500" height="500" className="rounded-2xl m-auto" />
+                  <Image src={sanoitusvastaavat} alt="Sanoitusvastaavat" className="rounded-2xl m-auto" />
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Sanoitus</h2>
                     <p className={"mb-4"}>Kreeta-Liina Franssila</p>
@@ -403,7 +418,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
-                  <Image src="/maskeeraus.jpg" alt="Lavastusvastaavat" width="500" height="500" className="rounded-2xl m-auto" />
+                  <Image src={maskeerausvastaavat} alt="Maskeerausvastaavat" className="rounded-2xl m-auto" />
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Maski</h2>
                     <p className={"mb-4"}>Hammi Vainio</p>
@@ -412,7 +427,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
-                  <Image src="/bandivastaavat.jpg" alt="Bändi" width="500" height="500" className="rounded-2xl m-auto" />
+                  <Image src={bandi} alt="Bändi" className="rounded-2xl m-auto" />
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Bändi</h2>
                     <p className={"mb-4"}>Heikki Koskiniemi</p>
@@ -421,7 +436,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
-                  <Image src="/lavastusvastaavat.jpg" alt="Lavastusvastaavat" width="500" height="500" className="rounded-2xl m-auto" />
+                  <Image src={lavastusvastaavat} alt="Lavastusvastaavat"  className="rounded-2xl m-auto" />
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Lavastus</h2>
                     <p className={"mb-4"}>Veera Kuronen</p>
@@ -430,14 +445,14 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
-                  <Image src="/kiertuvastaava.jpg" alt="Kiertuevastaava" width="500" height="500" className="rounded-2xl m-auto" />
+                  <Image src={kiertuevastaavat} alt="Kiertuevastaava" className="rounded-2xl m-auto" />
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Kiertue</h2>
                     <p className={"mb-4"}>JP Hakalehto</p>
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
-                  <Image src="/catering.jpg" alt="Catering-vastaavat" width="500" height="500" className="rounded-2xl m-auto" />
+                  <Image src={cateringvastaavat} alt="Catering-vastaavat"  className="rounded-2xl m-auto" />
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Catering</h2>
                     <p className={"mb-4"}>Ruska Heikkilä</p>
@@ -445,7 +460,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center justify-center">
-                  <Image src="/somevastaavat.jpg" alt="Somevastaavat" width="500" height="500" className="rounded-2xl m-auto" />
+                  <Image src={somevastaavat} alt="Somevastaavat" className="rounded-2xl m-auto" />
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Sosiaalinen media</h2>
                     <p className={"mb-4"}>Anni Keskinen</p>
@@ -453,7 +468,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
-                  <Image src="/hupitiimi.jpg" alt="Hupitiimi" width="500" height="500" className="rounded-2xl m-auto" />
+                  <Image src={hupitiimi} alt="Hupitiimi" className="rounded-2xl m-auto" />
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Hupitiimi</h2>
                     <p className={"mb-4"}>Riikka Yliriesto</p>
