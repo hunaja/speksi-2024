@@ -80,7 +80,7 @@ export default function Home() {
 
               <div className="align-center flex align-between flex-col lg:flex-row w-full place-content-between">
                   <div className="shadow-2xl border-r-2 border-b-2 border-zinc-800 bg-black items-center flex lg:rounded-br-[5rem] w-full flex-row content-center">
-                      <Image src="/Speksi24valkea.png" alt="Kuolon Speksi 2043" width="300" height="300" className="p-10 m-auto" />
+                      <Image src="/logo_2024.png" alt="Kuolon Speksi 2043" width="300" height="300" className="p-10 m-auto" />
                   </div>
 
                   <div className={"items-center justify-center flex w-full px-2 sm:px-10 py-5 lg:px-5 lg:py-2"}>
@@ -98,7 +98,7 @@ export default function Home() {
                       </p>
                   </div>
 
-                  <Image src="/instajulistet.png" alt="Juliste" width="500" height="500" className="m-10 rounded-xl" />
+                  <Image src="/juliste.png" alt="Juliste" width="500" height="500" className="m-10 rounded-xl" />
               </div>
           </article>
 
