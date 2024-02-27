@@ -13,20 +13,20 @@ import {
 import { faSquareInstagram, faFacebook, faVimeo } from '@fortawesome/free-brands-svg-icons'
 import CharacterSlider from "@/app/character_slider";
 
-import tuotantovastaavat from "@/public/tuotanto.jpg"
-import kasikirjoitusvastaavat from "@/public/kasikirjoitus.jpg"
-import taiteellinenjohto from "@/public/taiteellinenjohto.jpg"
-import tanssivastaavat from "@/public/tanssivastaavat.jpg"
-import puvustusvastaavat from "@/public/puvustusvastaavat.jpg"
-import valaistusvastaavat from "@/public/valaistusvastaavat.jpg"
-import sanoitusvastaavat from "@/public/sanoitusvastaavat.jpg"
-import maskeerausvastaavat from "@/public/maskeerausvastaavat.jpg"
-import bandi from "@/public/bandi.jpg"
-import lavastusvastaavat from "@/public/lavastusvastaavat.jpg"
-import kiertuevastaavat from "@/public/kiertuvastaava.jpg"
-import cateringvastaavat from "@/public/catering.jpg"
-import somevastaavat from "@/public/somevastaavat.jpg"
-import hupitiimi from "@/public/hupitiimi.jpg"
+import tuotantovastaavat from "@/public/vastaavat_original/tuotanto.jpg"
+import kasikirjoitusvastaavat from "@/public/vastaavat_cropped/kasikirjoitus.jpg"
+import taiteellinenjohto from "@/public/vastaavat_cropped/taiteellinenjohto.jpg"
+import tanssivastaavat from "@/public/vastaavat_cropped/tanssivastaavat.jpg"
+import puvustusvastaavat from "@/public/vastaavat_cropped/puvustusvastaavat.jpg"
+import valaistusvastaavat from "@/public/vastaavat_cropped/valaistusvastaavat.jpg"
+import sanoitusvastaavat from "@/public/vastaavat_cropped/sanoitusvastaavat.jpg"
+import maskeerausvastaavat from "@/public/vastaavat_cropped/maskeeraus.jpg"
+import bandi from "@/public/vastaavat_cropped/bandivastaavat.jpg"
+import lavastusvastaavat from "@/public/vastaavat_cropped/lavastusvastaavat.jpg"
+import kiertuevastaavat from "@/public/vastaavat_cropped/kiertuevastaava.jpg"
+import cateringvastaavat from "@/public/vastaavat_cropped/catering.jpg"
+import somevastaavat from "@/public/vastaavat_cropped/somevastaavat.jpg"
+import hupitiimi from "@/public/vastaavat_cropped/hupitiimi.jpg"
 
 // TODO: Serverside rendering optimization
 
@@ -341,7 +341,7 @@ export default function Home() {
             </div>*/}
 
             <div className="flex justify-center">
-              <Image src={"/kaariteksti.png"} alt="Tyyrpuurin tuolla puolen" width="200" height="200" />
+              <Image src={"/logo_kaari.png"} alt="Tyyrpuurin tuolla puolen" width="200" height="200" />
             </div>
           </div>
 
@@ -361,7 +361,7 @@ export default function Home() {
             <div className="mt-10 p-10">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
                 <div className="items-center h-full justify-content-center place-content-center">
-                  <Image src={tuotantovastaavat} alt="Tuotantovastaavat" className="rounded-2xl m-auto" />
+                  <Image src={tuotantovastaavat} alt="Tuotantovastaavat" className="rounded-2xl m-auto" rel={"preload"} />
                   <div className="flex-1 flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Tuotanto</h2>
                     <p className={"mb-4"}>Anniina Tapio</p>
@@ -369,7 +369,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
-                  <Image src={kasikirjoitusvastaavat} alt="Käsikirjoitusvastaavat"  className="rounded-2xl m-auto" />
+                  <Image src={kasikirjoitusvastaavat} alt="Käsikirjoitusvastaavat"  className="rounded-2xl m-auto" rel={"preload"} />
 
                     <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                       <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Käsikirjoitus</h2>
@@ -377,7 +377,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
-                  <Image src={taiteellinenjohto} alt="Taiteellisen johdon vastaavat" className="rounded-2xl m-auto" />
+                  <Image src={taiteellinenjohto} alt="Taiteellisen johdon vastaavat" className="rounded-2xl m-auto" rel={"preload"} />
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Taiteellinen johto</h2>
                     <p className={"mb-4"}>Rosa Sahlström</p>

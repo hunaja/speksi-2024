@@ -4,9 +4,19 @@ import React, {useEffect} from 'react';
 import { Lisu_Bosa } from 'next/font/google'
 import {animated, useSpring} from "@react-spring/web";
 
-import Image from "next/image";
+import NextImage from "next/image";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowLeft, faArrowRight, faDotCircle} from "@fortawesome/free-solid-svg-icons";
+
+import henrietta from "@/public/hahmot_cropped/henrietta.jpg";
+import alexander from "../public/hahmot_cropped/alexander.jpg";
+import clara from "@/public/hahmot_cropped/clara.jpg";
+import bobby from "@/public/hahmot_cropped/bobby.jpg";
+import kapteeni from "@/public/hahmot_cropped/kapteeni.jpg";
+import morrison from "@/public/hahmot_cropped/morrison.jpg";
+import rontti from "@/public/hahmot_cropped/rontti.jpg";
+import viima from "../public/hahmot_cropped/viima.jpg";
+import manda from "@/public/hahmot_cropped/manda.jpg";
 
 const lisuBosa = Lisu_Bosa({ subsets: ['latin'], weight: "700" })
 const characters = [
@@ -14,55 +24,55 @@ const characters = [
     place: 1,
     name: "Henrietta Harris",
     description: "Henrietta on Harristen temperamenttinen ja dramaattisuuteen taipuva esikoinen. Temperamentin tuo helposti esille hänen pikkuveljensä Alexander, jonka titteliä kauppaempiirin perijänä Henrietta kadehtii. Hänen mielestään on huutava vääryys, ettei hän voi periä yhtiötä vain, koska on nainen. Henrietan suurta tunneskaalaa laajentaa myös menneisyyden epäonninen romanssi, joka saa hänet unelmoimaan siitä “mitä voisikaan olla”.",
-    image: "/henrietta.jpg",
+    image: henrietta,
   },
   {
     place: 2,
     name: 'Alexander "Alex" Harris',
     description: "Alex on ison kauppapohatan ainut poika ja siten kauppaempiirin tuleva perijä. Hän on kasvanut vanhempiensa hieman liiankin suojelevaisessa kuplassa, minkä takia hänellä olisi harjoiteltavaa sosiaalisissa taidoissaan sekä omien mielipiteidensä ilmaisemisessa. Mutta miten sisimmältään kiltti Alex pärjää joutuessaan merirosvolaivalle? Riittääkö pelkkä salanimi “Albert” turvaksi, vai täytyykö Alexin oppia pitämään puoliaan - vaikeimman kautta?",
-    image: "/alexander.jpg",
+    image: alexander,
   },
   {
     place: 3,
     name: "Clara",
     description: "Clara on aurinkoinen, lempeä sekä itsetietoinen ylhäisönainen. Hän on Henrietan hyvä ystävä ja valmis kertomaan tälle suoratkin sanat. Claran elämänilo on pirskahtelevaa, vaikka menneisyydestä paljastuukin rakkaan aviomiehen menehtyminen. Onko Clara valmis avaamaan sydämensä uudelleen?",
-    image: "/clara.jpg",
+    image: clara
   },
   {
     place: 4,
     name: 'Robert "Bobby"',
     description: 'Bobby on kauppalaivaston nuori ja innokas kajuuttavahti. Hänen suurin unelmansa on seikkailu merillä merirosvojen parissa. Mutta miten käy, kun unelma käykin toteen? Onko naiivi ja puhelias poika valmis merirosvoelämän haasteisiin? Entä mikä olikaan miekkailua rakastavan Bobbyn syntyperä?',
-    image: "/bobby.jpg",
+    image: bobby
   },
   {
     place: 5,
     name: "Kapteeni Kultakynsi",
     description: 'Kapteeni Kultakynsi johtaa miehistöään kovalla otteella, eikä anna tilaa vastaväitteille. Hän on kuitenkin reilu ja lojaali miehistönsä jäseniä kohtaan, ja näkee heissä hyvätkin puolet. Kapteeni ei kuitenkaan päästä ihmisiä helposti lähelleen, ja vain muutama saa kutsua häntä hänen etunimellään “Marina”. Miten kapteeni pystyy säilyttämään miehistönsä uskollisuuden, kun menneisyyden katkeruus ottaa hänestä vallan? Ja onko se ainoa tunne, joka kapteenin sisimmässä kyteekään?',
-    image: "/kapteeni.jpg",
+    image: kapteeni
   },
   {
     place: 6,
     name: "Perämies Morrison",
     description: 'Perämies Morrisonilta ei karismaattisuutta puutu. Hän ihailee itseään ja kykyjään, sekä ajattelee olevansa huomattavasti parempi kapteenin pestiin kuin Kultakynsi. Keksiikö Perämies Morrison tavan saada haluamansa ylennyksen?',
-    image: "/morrison.jpg",
+    image: morrison
   },
   {
     place: 7,
     name: "Rontti",
     description: 'Rontti on merirosvolaivan karski korsto. Hänen harteilleen annetaan kaikki tehtävät, joihin liittyy uhkailua taikka pelottelua. Mutta sisältävätkö Rontin syvimmät haaveet sittenkään merirosvoilun raakuutta? Ja osaisiko hän edes enää tehdä oikein, jos saisi siihen tilaisuuden?',
-    image: "/rontti.jpg",
+    image: rontti
   },
   {
     place: 8,
     name: "Viima",
     description: 'Viima toimii merirosvolaivalla lähetin pestissä. Luonteeltaan hän on hölmö höseltäjä, jonka tarinat hairahtuvat usein kaikkien muiden mielestä turhiin yksityiskohtiin. Pienistä vioistaan huolimatta Viima ilmestyy aina sinne missä häntä tarvitaan, usein itsekään tietämättä miten siinä onnistuu.',
-    image: "/viima.jpg",
+    image: viima
   },
   {
     place: 9,
     name: "Manda",
     description: 'Manda on vakiokalustoa merirosvolaivalla, eikä kukaan oikein tarkasti tiedä, kuinka vanha hän onkaan. Tähän vaikuttaa Mandan tapa esittää huomattavasti vanhempaa ja raihnaisempaa merirosvolaivan miehistön nähden. Mandan löytää sieltä, missä tapahtuu ja mistä on mahdollista kerätä hyviä juoruja. Ja jos mitään häntä viihdyttävää ei tapahdu, hän kyllä osaa laittaa pyörät pyörimään niin, että ainakin pian on viihdykettä tarjolla!',
-    image: "/manda.jpg",
+    image: manda
   }
 ]
 
@@ -76,6 +86,14 @@ export default function CharacterSlider() {
   useEffect(() => {
     setFadeIn({ opacity: 1, from: { opacity: 0 } });
   }, [currentPlace, setFadeIn]);
+
+  useEffect(() => {
+    // preload all images
+    characters.forEach(character => {
+      const img = new Image();
+      img.src = character.image.src;
+    });
+  }, []);
 
   if (!character) return null;
 
@@ -118,7 +136,7 @@ export default function CharacterSlider() {
             </p>
           </div>
           <div className={"flex flex-col justify-center max-w-full"}>
-              <Image src={character.image} alt={character.name} width="500" height="500" priority={true}
+              <NextImage src={character.image} alt={character.name} priority={true}
                    className="p-2 lg:p-10 max-w-[40vw] m-auto lg:m-0" />
           </div>
         </animated.div>
