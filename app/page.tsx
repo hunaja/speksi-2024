@@ -291,7 +291,7 @@ export default function Home() {
                   </div>
                   </a>
                   <div className="border-l-2 border-zinc-500 h-6 ml-2 md:mr-2 border-dotted" />
-<a href="https://kide.app/events/afd6cce8-a018-49c5-a112-7e133656c102/details" target={"_blank"}>
+                <a href="https://kide.app/events/afd6cce8-a018-49c5-a112-7e133656c102/details" target={"_blank"}>
                   <div className="bg-pink-800 text-black border-pink-950 shadow-xl border-2 w-full lg:w-96 py-2 pr-12 text-sm font-light">
                     <div className="flex place-items-center">
                       <FontAwesomeIcon icon={faBus} className="h-12 w-12 p-2 text-black" />
@@ -314,7 +314,7 @@ export default function Home() {
                       18 € opiskelija
                     </li>
                   </div>
-</a>
+                </a>
                 </div>
               </div>
           </article>
@@ -350,7 +350,7 @@ export default function Home() {
                   <div className="flex-1 flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Tuotanto</h2>
                     <p className={"mb-4"}>Anniina Tapio</p>
-                    <p>Juho Anderson</p>
+                    <p>Juha Anderson</p>
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
@@ -358,7 +358,7 @@ export default function Home() {
 
                     <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                       <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Käsikirjoitus</h2>
-                      <p>Aino Haajanen</p>
+                      <p>Aino Jaakkola</p>
                     </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
@@ -456,7 +456,7 @@ export default function Home() {
                   <Image src="/hupitiimi.jpg" alt="Hupitiimi" width="500" height="500" className="rounded-2xl m-auto" />
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Hupitiimi</h2>
-                    <p className={"mb-4"}>Riikka Yli-Riesto</p>
+                    <p className={"mb-4"}>Riikka Yliriesto</p>
                     <p className={"mb-4"}>Hanna Mangeloja</p>
                     <p>Hanna Hara</p>
                   </div>

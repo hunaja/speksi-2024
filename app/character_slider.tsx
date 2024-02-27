@@ -20,7 +20,7 @@ const characters = [
     place: 2,
     name: 'Alexander "Alex" Harris',
     description: "Alex on ison kauppapohatan ainut poika ja siten kauppaempiirin tuleva perijä. Hän on kasvanut vanhempiensa hieman liiankin suojelevaisessa kuplassa, minkä takia hänellä olisi harjoiteltavaa sosiaalisissa taidoissaan sekä omien mielipiteidensä ilmaisemisessa. Mutta miten sisimmältään kiltti Alex pärjää joutuessaan merirosvolaivalle? Riittääkö pelkkä salanimi “Albert” turvaksi, vai täytyykö Alexin oppia pitämään puoliaan - vaikeimman kautta?",
-    image: "/placeholder.gif",
+    image: "/alexander.jpg",
   },
   {
     place: 3,
@@ -38,13 +38,13 @@ const characters = [
     place: 5,
     name: "Kapteeni Kultakynsi",
     description: 'Kapteeni Kultakynsi johtaa miehistöään kovalla otteella, eikä anna tilaa vastaväitteille. Hän on kuitenkin reilu ja lojaali miehistönsä jäseniä kohtaan, ja näkee heissä hyvätkin puolet. Kapteeni ei kuitenkaan päästä ihmisiä helposti lähelleen, ja vain muutama saa kutsua häntä hänen etunimellään “Marina”. Miten kapteeni pystyy säilyttämään miehistönsä uskollisuuden, kun menneisyyden katkeruus ottaa hänestä vallan? Ja onko se ainoa tunne, joka kapteenin sisimmässä kyteekään?',
-    image: "/placeholder.gif",
+    image: "/kapteeni.jpg",
   },
   {
     place: 6,
     name: "Perämies Morrison",
     description: 'Perämies Morrisonilta ei karismaattisuutta puutu. Hän ihailee itseään ja kykyjään, sekä ajattelee olevansa huomattavasti parempi kapteenin pestiin kuin Kultakynsi. Keksiikö Perämies Morrison tavan saada haluamansa ylennyksen?',
-    image: "/placeholder.gif",
+    image: "/morrison.jpg",
   },
   {
     place: 7,
@@ -118,8 +118,8 @@ export default function CharacterSlider() {
             </p>
           </div>
           <div className={"flex flex-col justify-center max-w-full"}>
-              <img src={character.image} alt="Hahmokaarti"
-                   className="p-2 lg:p-10 max-w-[40vw] md:max-w-[30vw] m-auto lg:m-0"/>
+              <Image src={character.image} alt={character.name} width="500" height="500" priority={true}
+                   className="p-2 lg:p-10 max-w-[40vw] m-auto lg:m-0" />
           </div>
         </animated.div>
             <button

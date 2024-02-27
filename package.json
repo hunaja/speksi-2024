@@ -16,7 +16,8 @@
     "@react-spring/web": "^9.7.3",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "sharp": "^0.33.2"
   },
   "devDependencies": {
     "@types/node": "latest",
