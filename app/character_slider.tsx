@@ -137,7 +137,7 @@ export default function CharacterSlider() {
           </div>
           <div className={"flex flex-col justify-center max-w-full"}>
               <NextImage src={character.image} alt={character.name} priority={true}
-                   className="p-2 lg:p-10 max-w-[40vw] m-auto lg:m-0" />
+                   className="p-2 lg:p-10 max-w-[30vw] m-auto lg:m-0" />
           </div>
         </animated.div>
             <button
