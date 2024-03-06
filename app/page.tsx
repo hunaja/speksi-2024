@@ -29,6 +29,8 @@ import kiertuevastaavat from "@/public/vastaavat_cropped/kiertuevastaava.jpg"
 import cateringvastaavat from "@/public/vastaavat_cropped/catering.jpg"
 import somevastaavat from "@/public/vastaavat_cropped/somevastaavat.jpg"
 import hupitiimi from "@/public/vastaavat_cropped/hupitiimi.jpg"
+import itvastaava from "@/public/vastaavat_cropped/itvastaava.jpg"
+import logistiikka from "@/public/vastaavat_cropped/logistiikka.jpg"
 
 // TODO: Serverside rendering optimization
 
@@ -291,7 +293,7 @@ export default function Home() {
                     </div>
                     <li className="flex place-items-center">
                       <FontAwesomeIcon icon={faCalendarDay} className={"h-4 w-4 p-2"} />
-                      Su 6.4.
+                      La 6.4.
                     </li>
                     <li className="flex place-items-center">
                       <FontAwesomeIcon icon={faClock} className={"h-4 w-4 p-2"} />
@@ -316,7 +318,7 @@ export default function Home() {
                     </div>
                     <li className="flex place-items-center">
                       <FontAwesomeIcon icon={faCalendarDay} className={"h-4 w-4 p-2"} />
-                      Ma 7.4.
+                      Su 7.4.
                     </li>
                     <li className="flex place-items-center">
                       <FontAwesomeIcon icon={faClock} className={"h-4 w-4 p-2"} />
@@ -492,6 +494,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
+                    <Image src={logistiikka} alt="Logistiikka" className="rounded-2xl m-auto" />
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Logistiikka</h2>
                     <p>-</p>
                   </div>
@@ -520,6 +523,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
+                  <Image src={itvastaava} alt="IT-vastaava"  className="rounded-2xl m-auto" />
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Nettisivut</h2>
                     <p>Elias Leskinen</p>
