@@ -31,6 +31,7 @@ import somevastaavat from "@/public/vastaavat_cropped/somevastaavat.jpg"
 import hupitiimi from "@/public/vastaavat_cropped/hupitiimi.jpg"
 import itvastaava from "@/public/vastaavat_cropped/itvastaava.jpg"
 import logistiikka from "@/public/vastaavat_cropped/logistiikka.jpg"
+import valokuvaustiimi from "@/public/vastaavat_cropped/valokuvaustiimi.jpg"
 
 // TODO: Serverside rendering optimization
 
@@ -465,14 +466,16 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
+                  <Image src={valokuvaustiimi} alt="Valokuvaustiimi" className="rounded-2xl m-auto" />
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Valokuvaus</h2>
                     <p className={"mb-4"}>Otto Laine</p>
-                    <p>Alpo Laitinen</p>
+                    <p className={"mb-4"}>Alpo Laitinen</p>
+                    <p>Otto Tahvanainen</p>
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
-                  <Image src={aanivastaaavat} alt="Äänivastaavat" className="rounded-2xl m-auto" rel={"preload"} />
+                  <Image src={aanivastaaavat} alt="Äänivastaavat" className="rounded-2xl m-auto" />
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Ääni</h2>
                     <p>-</p>
@@ -514,12 +517,6 @@ export default function Home() {
                     <p className={"mb-4"}>Riikka Yliriesto</p>
                     <p className={"mb-4"}>Hanna Mangeloja</p>
                     <p>Hanna Hara</p>
-                  </div>
-                </div>
-                <div className="flex flex-col items-center h-full justify-content-center place-content-center">
-                  <div className="flex-1 h-full flex flex-col justify-center place-items-center">
-                    <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Trailerin editointi</h2>
-                    <p>-</p>
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
