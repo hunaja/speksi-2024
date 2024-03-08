@@ -34,6 +34,8 @@ import logistiikka from "@/public/vastaavat_cropped/logistiikka.jpg"
 import valokuvaustiimi from "@/public/vastaavat_cropped/valokuvaustiimi.jpg"
 import grafiikkavastaava from "@/public/vastaavat_cropped/grafiikka.jpg"
 
+import psly from "@/public/psly.png"
+
 // TODO: Serverside rendering optimization
 
 // lightwight inter
@@ -341,13 +343,15 @@ export default function Home() {
           </article>
 
           <div className="bg-zinc-700 pb-10">
-            {/*<div className="mb-30 pt-5 flex flex-row justify-center place-items-center">
-              <i className={"p-2"}>ykkönen</i>
-              <i className={"p-2"}>kakkonen<br/>testi</i>
-            </div>*/}
-
             <div className="flex justify-center">
               <Image src={"/logo_kaari.png"} alt="Tyyrpuurin tuolla puolen" width="200" height="200" />
+            </div>
+
+            <div className="mb-30 pt-5 flex flex-row justify-center place-items-center mt-20">
+              <i className={"p-2"}>
+                <Image src={psly} alt="Pohjois-Savon Lääkäriyhdistys" width="200" height="200" />
+              </i>
+              {/*<i className={"p-2"}>kakkonen<br/>testi</i>*/}
             </div>
           </div>
 
