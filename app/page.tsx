@@ -479,7 +479,8 @@ export default function Home() {
                   <Image src={aanivastaaavat} alt="Äänivastaavat" className="rounded-2xl m-auto" />
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Ääni</h2>
-                    <p>-</p>
+                    <p className={"mb-4"}>Niko Vuorinen</p>
+                    <p>Oskari Rantamäki</p>
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
@@ -494,7 +495,7 @@ export default function Home() {
                   <div className="flex-1 h-full flex flex-col justify-center place-items-center">
                     <h2 className="text-xl drop-shadow-2xl text-teal-600 my-10">Catering</h2>
                     <p className={"mb-4"}>Ruska Heikkilä</p>
-                    <p className={"mb-4"}>Petra Valkonen</p>
+                    <p>Petra Valkonen</p>
                   </div>
                 </div>
                 <div className="flex flex-col items-center h-full justify-content-center place-content-center">
