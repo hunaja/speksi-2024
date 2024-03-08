@@ -8,14 +8,14 @@ import NextImage from "next/image";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faArrowLeft, faArrowRight, faDotCircle} from "@fortawesome/free-solid-svg-icons";
 
-import henrietta from "@/public/hahmot_cropped/henrietta.jpg";
+import henrietta from "@/public/hahmot_cropped/henrietta.png";
 import alexander from "../public/hahmot_cropped/alexander.jpg";
 import clara from "@/public/hahmot_cropped/clara.jpg";
 import bobby from "@/public/hahmot_cropped/bobby.jpg";
 import kapteeni from "@/public/hahmot_cropped/kapteeni.jpg";
 import morrison from "@/public/hahmot_cropped/morrison.jpg";
 import rontti from "@/public/hahmot_cropped/rontti.jpg";
-import viima from "../public/hahmot_cropped/viima.jpg";
+import viima from "../public/hahmot_cropped/viima.png";
 import manda from "@/public/hahmot_cropped/manda.jpg";
 
 const lisuBosa = Lisu_Bosa({ subsets: ['latin'], weight: "700" })
