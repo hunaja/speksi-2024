@@ -25,54 +25,63 @@ const characters = [
     name: "Henrietta Harris",
     description: "Henrietta on Harristen temperamenttinen ja dramaattisuuteen taipuva esikoinen. Erityisen tunteikkaasti hän suhtautuu pikkuveljeensä Alexanderiin, jonka titteliä kauppaempiirin perijänä Henrietta kadehtii. Hänen mielestään on huutava vääryys, ettei hän voi periä yhtiötä vain, koska on nainen. Henrietan suurta tunneskaalaa laajentaa myös menneisyyden epäonninen romanssi, joka saa hänet unelmoimaan siitä “mitä voisikaan olla”.",
     image: henrietta,
+    og: "henrietta"
   },
   {
     place: 2,
     name: 'Alexander "Alex" Harris',
     description: "Alex on ison kauppapohatan ainut poika ja siten kauppaempiirin tuleva perijä. Hän on kasvanut kodin liiankin suojaisassa turvassa, minkä takia hänellä olisi harjoiteltavaa sosiaalisissa taidoissaan sekä omien mielipiteidensä ilmaisemisessa. Mutta miten sisimmältään kiltti Alex pärjää joutuessaan merirosvolaivalle? Riittääkö pelkkä salanimi “Albert” turvaksi, vai täytyykö Alexin oppia pitämään puoliaan - vaikeimman kautta?",
     image: alexander,
+    og: "alexander"
   },
   {
     place: 3,
     name: "Clara",
     description: "Clara on aurinkoinen, lempeä sekä itsetietoinen ylhäisönainen. Hän on Henrietan hyvä ystävä ja valmis kertomaan tälle suoratkin sanat. Claran elämänilo on pirskahtelevaa, vaikka menneisyydestä paljastuukin rakkaan aviomiehen menehtyminen. Onko Clara valmis avaamaan sydämensä uudelleen?",
-    image: clara
+    image: clara,
+    og: "clara"
   },
   {
     place: 4,
     name: 'Robert "Bobby"',
     description: 'Bobby on kauppalaivaston nuori ja innokas kajuuttavahti. Hänen suurin haaveensa on seikkailla suurilla vesillä merirosvojen kanssa. Mutta miten käy, kun unelma käykin toteen? Onko naiivi ja puhelias poika valmis merirosvoelämän haasteisiin? Entä mikä olikaan miekkailua rakastavan Bobbyn syntyperä?',
-    image: bobby
+    image: bobby,
+    og: "bobby"
   },
   {
     place: 5,
     name: "Kapteeni Kultakynsi",
     description: 'Kapteeni Kultakynsi johtaa miehistöään kovalla otteella, eikä anna tilaa vastaväitteille. Hän on kuitenkin reilu ja lojaali miehistönsä jäseniä kohtaan, ja näkee heissä hyvätkin puolet. Kapteeni ei päästä ihmisiä helposti lähelleen, ja vain muutama tuntee hänen etunimensä Marina, saati saa kutsua häntä siten. Miten kapteeni pystyy säilyttämään miehistönsä uskollisuuden, kun menneisyyden katkeruus ottaa hänestä vallan? Ja onko se ainoa tunne, joka kapteenin sisimmässä kyteekään?',
-    image: kapteeni
+    image: kapteeni,
+    og: "kapteeni"
   },
   {
     place: 6,
     name: "Perämies Morrison",
     description: 'Laivan perämies Morrison on vankkumattomalla itseluottamuksella ja armottomuudella varustettu merirosvo. Ainut, mitä häneltä puuttuu, on raaka voima - ja oma merirosvolaiva johdettavana. Voiman puutteen Morrison on ratkaissut haalimalla vuosien saatossa Rontin oikeaksi kädekseen sekä toisaalta käskyläisekseen. Siispä ratkaistavana olisi enää kapteenin pesti... Keksiikö perämies Morrison tavan saada haluamansa ylennyksen?',
-    image: morrison
+    image: morrison,
+    og: "morrison"
   },
   {
     place: 7,
     name: "Rontti",
     description: 'Rontti on merten hurjimmat taistelut kokenut karski korsto. Hänen harteilleen annetaan kaikki tehtävät, joihin liittyy uhkailua taikka pelottelua. Mutta sisältävätkö Rontin syvimmät haaveet sittenkään ryöstelyn raakuutta? Ja osaisiko hän enää edes tehdä oikein, jos saisi siihen tilaisuuden?',
-    image: rontti
+    image: rontti,
+    og: "rontti"
   },
   {
     place: 8,
     name: "Viima",
     description: 'Viima toimii merirosvolaivalla lähetin pestissä. Luonteeltaan hän on hölmö höseltäjä, jonka tarinat harhautuvat usein kaikkien muiden mielestä turhiin yksityiskohtiin. Pienistä vioistaan huolimatta Viima ilmestyy aina sinne missä häntä tarvitaan, usein itsekään tietämättä miten siinä onnistuu.',
-    image: viima
+    image: viima,
+    og: "viima"
   },
   {
     place: 9,
     name: "Manda",
     description: 'Manda on merirosvolaivan vakiokalustoa, eikä kukaan oikein tiedä, kuinka vanha hän onkaan. Tähän vaikuttaa Mandan tapa esittää huomattavasti vanhempaa ja raihnaisempaa merirosvolaivan miehistölle - lukuunottamatta laivan kapteenia, joka on onkin Mandalle kuin oma tytär. Mandan löytää sieltä, mistä on mahdollista kerätä hyviä juoruja. Ja jos mitään häntä viihdyttävää ei tapahdu, hän kyllä osaa laittaa pyörät pyörimään niin, että ainakin pian on viihdykettä tarjolla!',
-    image: manda
+    image: manda,
+    og: "manda"
   }
 ]
 
@@ -136,8 +145,10 @@ export default function CharacterSlider() {
             </p>
           </div>
           <div className={"flex flex-col justify-center max-w-full"}>
-              <NextImage src={character.image} alt={character.name} priority={true}
-                   className="p-2 lg:p-10 max-w-[40vw] m-auto lg:m-0" />
+              <a href={`/hahmot_original/${character.og}.jpg`} rel="noopener noreferrer" target="_blank">
+                <NextImage src={character.image} alt={character.name} priority={true}
+                           className="p-2 lg:p-10 max-w-[40vw] m-auto lg:m-0" />
+              </a>
           </div>
         </animated.div>
             <button
