@@ -134,7 +134,7 @@ export default function Home() {
                          </li>
                          <li className="flex place-items-center">
                             <FontAwesomeIcon icon={faClock} className={"h-4 w-4 p-2"} />
-                            Klo 19:00
+                            Klo 18:30
                          </li>
                          <li className="flex place-items-center">
                            <FontAwesomeIcon icon={faLocationPin} className={"h-4 w-4 p-2"} />
